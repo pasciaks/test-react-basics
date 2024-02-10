@@ -8,29 +8,6 @@ body {
 }
 
 code {
-  background-color: black;
-  color: white;
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-nav li {
-  flex-grow: 1;
-  background-color: aqua;
-  padding: 10px;
-  margin: 0;
-  display: inline-block;
-}
-
-li:hover {
-  background-color: blue;
-  color: white;
 }
