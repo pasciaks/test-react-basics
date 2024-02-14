@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Candidate View</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Add custom styling for table borders */
+        .table-bordered {
+            border: 1px solid #dee2e6;
+        }
+
+        .table-bordered th,
+        .table-bordered td {
+            border: 1px solid #dee2e6;
+            white-space: normal !important;
+            word-wrap: break-word;
+        }
+
+        .form-check {
+            display: inline-block;
+        }
+
+        .table-container {
+            max-width: 100%;
+            overflow-x: auto;
+        }
+
+        .table-container {
+      max-width: 100%;
+      overflow-x: auto;
+    }
+
+    /* Additional styles for table */
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .table th,
+    .table td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #dee2e6;
+    }
+
+    .table th {
+      background-color: #f0c3aa; /* Pastel Orange */
+      font-weight: bold;
+    }
+
+    .table tbody tr:hover {
+      background-color: #c3e6e0; /* Pastel Blue */
+    }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col margin-auto">
+                <h1>Job Seekers</h1>
+                <p>Query params used to find these candidates</p>
+
+
+
+                <div class="container mt-5">
+                    <form class="form-inline">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="remote">
+                                    <label class="form-check-label" for="remote">REMOTE</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="javascript">
+                                    <label class="form-check-label" for="javascript">JavaScript</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="java">
+                                    <label class="form-check-label" for="java">Java</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="python">
+                                    <label class="form-check-label" for="python">Python</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="mysql">
+                                    <label class="form-check-label" for="mysql">MySql</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="react">
+                                    <label class="form-check-label" for="react">React</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="vue">
+                                    <label class="form-check-label" for="vue">Vue</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="nodejs">
+                                    <label class="form-check-label" for="nodejs">NodeJS</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="typescript">
+                                    <label class="form-check-label" for="typescript">TypeScript</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="angular">
+                                    <label class="form-check-label" for="angular">Angular</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="dotnet">
+                                    <label class="form-check-label" for="dotnet">.NET</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="vet">
+                                    <label class="form-check-label" for="vet">VET</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="days">
+                                    <label class="form-check-label" for="days">DAYS</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="swings">
+                                    <label class="form-check-label" for="swings">SWINGS</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="mids">
+                                    <label class="form-check-label" for="mids">MIDS</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="fulltime">
+                                    <label class="form-check-label" for="fulltime">FULLTIME</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="parttime">
+                                    <label class="form-check-label" for="parttime">PARTTIME</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="contract">
+                                    <label class="form-check-label" for="contract">CONTRACT</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="needs_med">
+                                    <label class="form-check-label" for="needs_med">NEEDS MED</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="needs_dental">
+                                    <label class="form-check-label" for="needs_dental">NEEDS DENTAL</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="needs_401k">
+                                    <label class="form-check-label" for="needs_401k">NEEDS 401K</label>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-3">Search</button>
+                    </form>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container mt-5">
+        <div class="table-container w-50">
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>Name, Image, Email</th>
+                        <th>Phone</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Zip</th>
+                        <th>Distance</th>
+                        <th>Match Score</th>
+                        <th>REMOTE</th>
+                        <th>JavaScript</th>
+                        <th>Java</th>
+                        <th>Python</th>
+                        <th>MySql</th>
+                        <th>React</th>
+                        <th>Vue</th>
+                        <th>NodeJS</th>
+                        <th>TypeScript</th>
+                        <th>Angular</th>
+                        <th>.NET</th>
+                        <th>VET</th>
+                        <th>DAYS</th>
+                        <th>SWINGS</th>
+                        <th>MIDS</th>
+                        <th>FULLTIME</th>
+                        <th>PARTTIME</th>
+                        <th>CONTRACT</th>
+                        <th>NEEDS MED</th>
+                        <th>NEEDS DENTAL</th>
+                        <th>NEEDS 401K</th>
+                        <th>[Favorite]</th>
+                        <th>[Forget]</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Sample data rows -->
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <div>
+                                <img src="https://via.placeholder.com/50" alt="Sample Image">
+                                <span>John Doe</span><br>
+                                <span>john.doe@example.com</span>
+                            </div>
+                        </td>
+                        <td>123-456-7890</td>
+                        <td>New York</td>
+                        <td>NY</td>
+                        <td>10001</td>
+                        <td>Estimated</td>
+                        <td>Match Score: 88%</td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" checked disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" checked disabled></td>
+                        <td><input type="checkbox" checked disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" checked disabled></td>
+                        <td><input type="checkbox" checked disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" checked disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" checked disabled></td>
+                        <td><input type="checkbox" checked disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" checked disabled></td>
+                        <td><input type="checkbox" checked disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><button class="btn btn-sm btn-primary">Add to Favorites</button></td>
+                        <td><button class="btn btn-sm btn-danger">Forget</button></td>
+                    </tr>
+                    <!-- Sample data rows -->
+                    <tr>
+                        <td>2</td>
+                        <td>
+                            <div>
+                                <img src="https://via.placeholder.com/50" alt="Sample Image">
+                                <span>Jane Smith</span><br>
+                                <span>jane.smith@example.com</span>
+                            </div>
+                        </td>
+                        <td>987-654-3210</td>
+                        <td>Los Angeles</td>
+                        <td>CA</td>
+                        <td>90001</td>
+                        <td>Estimated</td>
+                        <td>Match Score: 68%</td>
+                        <td><input type="checkbox" checked disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" checked disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" checked disabled></td>
+                        <td><input type="checkbox" checked disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" checked disabled></td>
+                        <td><input type="checkbox" checked disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" checked disabled></td>
+                        <td><input type="checkbox" checked disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" checked disabled></td>
+                        <td><input type="checkbox" checked disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><button class="btn btn-sm btn-primary">Add to Favorites</button></td>
+                        <td><button class="btn btn-sm btn-danger">Forget</button></td>
+                    </tr>
+                    <!-- Sample data rows -->
+                    <tr>
+                        <td>3</td>
+                        <td>
+                            <div>
+                                <img src="https://via.placeholder.com/50" alt="Sample Image">
+                                <span>Michael Johnson</span><br>
+                                <span>michael.johnson@example.com</span>
+                            </div>
+                        </td>
+                        <td>555-123-4567</td>
+                        <td>Salt Lake City</td>
+                        <td>UT</td>
+                        <td>84129</td>
+                        <td>0 miles</td>
+                        <td>Match Score: 38%</td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" checked disabled></td>
+                        <td><input type="checkbox" checked disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" checked disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" checked disabled></td>
+                        <td><input type="checkbox" checked disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><button class="btn btn-sm btn-primary">Add to Favorites</button></td>
+                        <td><button class="btn btn-sm btn-danger">Forget</button></td>
+                    </tr>
+                    <!-- Add more rows with sample data here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>
