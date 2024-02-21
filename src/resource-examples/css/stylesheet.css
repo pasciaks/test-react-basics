@@ -1,3 +1,7 @@
 .container {
-    border: 1px solid black;
+    /* This is a comment */
+    background-color: #f0f0f0;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #e0e0e0;
 }
